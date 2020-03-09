@@ -44,7 +44,6 @@ const TokenReducer = (state = initialState, action) => {
             return {
                 ...state,
                 status: action.type,
-                loading: false,
             }
 
         case GET_TOKEN_SUCCESS:
