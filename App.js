@@ -37,29 +37,28 @@ function App(props) {
 
   if (props.loading) {
     return (
-      <Splash/>
+      <Splash />
     )
-  } else {
-    return (
-      <NavigationContainer>
-        {props.token == null ?
-          <Stack.Navigator screenOptions={{
-            headerShown: false
-          }}>
-            <Stack.Screen name="Login" component={Login} />
-          </Stack.Navigator>
-          :
-          <Stack.Navigator screenOptions={{
-            headerShown: false
-          }}>
-            <Stack.Screen name="Dashboard" component={Dashboard} />
-          </Stack.Navigator>
-
-        }
-
-      </NavigationContainer >
-    );
   }
+  return (
+    <NavigationContainer>
+      {props.token == null ?
+        <Stack.Navigator screenOptions={{
+          headerShown: false
+        }}>
+          <Stack.Screen name="Login" component={Login} />
+        </Stack.Navigator>
+        :
+        <Stack.Navigator screenOptions={{
+          headerShown: false
+        }}>
+          <Stack.Screen name="Dashboard" component={Dashboard} />
+        </Stack.Navigator>
+
+      }
+
+    </NavigationContainer >
+  );
 
 
 }
