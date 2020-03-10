@@ -37,15 +37,7 @@ function App(props) {
 
   if (props.loading) {
     return (
-      <NavigationContainer>
-
-        <Stack.Navigator screenOptions={{
-          headerShown: false
-        }}>
-          <Stack.Screen name="Splash" component={Splash} />
-        </Stack.Navigator>
-
-      </NavigationContainer >
+      <Splash/>
     )
   } else {
     return (
